@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Basic Enemy Shooter
   m_EditorClassIdentifier: 
   enemyName: Basic Shooter
-  bulletPrefab: {fileID: 1449719470568328417, guid: 1466b2b7a93539c4f9a5eccaa0599300, type: 3}
+  bulletPrefab: {fileID: 8288033783111592478, guid: c7f5123105625764c9dae806c3edb942, type: 3}
   enemyHealth: 1
-  enemySpeed: 1
+  enemySpeed: 2
   enemyFireRate: 1
+  enemyDirectionX: 1
+  enemyDirectionY: 1
+  expValue: 0
