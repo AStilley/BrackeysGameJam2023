@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public PlayerShooting sScript;
     [HideInInspector] public PlayerCollision cScript;
+    [HideInInspector] public PlayerRebirth rScript;
 
     public float SPD = 3;
     public float ATK = 1;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sScript = GetComponent<PlayerShooting>();
         cScript = GetComponent<PlayerCollision>();
+        rScript = GetComponent<PlayerRebirth>();
     }
 
     void Update()

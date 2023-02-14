@@ -6,10 +6,10 @@ public class PlayerShooting : MonoBehaviour
 {
     [HideInInspector] public PlayerMovement mScript;
     [HideInInspector] public PlayerCollision cScript;
+    [HideInInspector] public PlayerRebirth rScript;
 
     public float FRT = 5;
     private float fireTime;
-
 
     public Bullet pBullet;
     public GameObject bullet;
@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour
     {
         mScript = GetComponent<PlayerMovement>();
         cScript = GetComponent<PlayerCollision>();
+        rScript = GetComponent<PlayerRebirth>();
     }
 
     void Update()
