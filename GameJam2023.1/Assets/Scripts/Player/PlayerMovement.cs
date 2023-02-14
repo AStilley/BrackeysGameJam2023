@@ -19,9 +19,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Rigidbody2D rb;
 
 
-    [SerializeField]
-    private PolygonCollider2D[] colliders;
-    private int currentColliderIndex = 0;
 
     void Awake()
     {
@@ -41,11 +38,4 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = movement.normalized * SPD;
     }
 
-
-    public void SetColliderForSprite(int spriteNum)
-    {
-        colliders[currentColliderIndex].enabled = false;
-        currentColliderIndex = spriteNum;
-        colliders[currentColliderIndex].enabled = true;
-    }
 }
