@@ -10,6 +10,8 @@ public class PlayerShooting : MonoBehaviour
     public float FRT = 5;
     private float fireTime;
 
+
+    public Bullet pBullet;
     public GameObject bullet;
 
     void Awake()
@@ -24,7 +26,8 @@ public class PlayerShooting : MonoBehaviour
         {
             if (fireTime <= 0f)
             {
-                Instantiate(bullet, transform.position, Quaternion.identity);
+                Bullet playerBullet = Instantiate(pBullet, transform.position, Quaternion.identity) as Bullet;
+                playerBullet.atk = mScript.ATK;//Creates bullets and then gives the bullets the ATK value 
             }
         }
     }

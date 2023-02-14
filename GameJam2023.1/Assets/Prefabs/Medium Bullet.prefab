@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1449719470568328416}
   - component: {fileID: 1449719470568328421}
   - component: {fileID: 1449719470568328418}
+  - component: {fileID: 4537214118963058061}
   m_Layer: 8
   m_Name: Medium Bullet
   m_TagString: Untagged
@@ -120,3 +121,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -3
+  atk: 0
+--- !u!58 &4537214118963058061
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449719470568328417}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
