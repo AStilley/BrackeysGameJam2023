@@ -21,6 +21,11 @@ public class PlayerCollision : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
+    void Update()
+    {
+        rScript.growth = (rScript.lvl / 5);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Exp"))
@@ -37,8 +42,6 @@ public class PlayerCollision : MonoBehaviour
                     rScript.lvl++;
                 }
             }
-
-            rScript.growth = (rScript.lvl / 5) + 1f;
         }
 
         Debug.Log(collision.gameObject.name + "!");

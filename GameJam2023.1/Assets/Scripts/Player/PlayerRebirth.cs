@@ -26,8 +26,8 @@ public class PlayerRebirth : MonoBehaviour
 
     public void Rebirth()
     {
-        sScript.ATK = sScript.ATK * growth;
-        mScript.SPD = mScript.SPD * growth;
-        sScript.RNG = sScript.RNG * growth;
+        sScript.ATK = sScript.ATK + (growth);
+        mScript.SPD = mScript.SPD + (growth / 5f);
+        sScript.RNG = sScript.RNG + (growth / 2f);
     }
 }
