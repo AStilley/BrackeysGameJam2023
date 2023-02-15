@@ -56,7 +56,7 @@ public class HealthSystem : MonoBehaviour
 			RectTransform g = Instantiate(HealthCorePrefab, Vector3.zero, Quaternion.identity, HealthCanvas) as RectTransform;
 			g.anchoredPosition = new Vector2(-500 + (50f * i), 245f);
 		}
-		Debug.Log(health + " Health!");
+		Debug.Log("Player has " + health + " Health!");
 	}
 
 }

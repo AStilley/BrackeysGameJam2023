@@ -21,8 +21,9 @@ public class PlayerCollision : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
+<<<<<<< Updated upstream
         if (EXP >= maxEXP)
         {
             float expGain = maxEXP * 1.25f;
@@ -44,5 +45,8 @@ public class PlayerCollision : MonoBehaviour
             EXP++;
             Destroy(collision.gameObject);
         }
+=======
+        Debug.Log(col.gameObject.name + "!");
+>>>>>>> Stashed changes
     }
 }

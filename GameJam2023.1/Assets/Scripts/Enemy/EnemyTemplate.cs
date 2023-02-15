@@ -9,12 +9,10 @@ public class EnemyTemplate : MonoBehaviour
 
     public Enemy enemy;
     private IEnumerator coroutine;
-
     private Rigidbody2D rb;
     public GameObject expObject;
     void Awake()
     {
-
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         currHealth = enemy.enemyHealth;
@@ -40,11 +38,13 @@ public class EnemyTemplate : MonoBehaviour
         Debug.Log("Test");
         while (true)
         { 
-            Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bGameObject = Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
+            bGameObject.GetComponent<Bullet>().atk = 1f;
             yield return new WaitForSeconds(waitTime);
         }
         //Shoots a bullet determined by the enemy type. Small, medium or large.
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("Player touched me");

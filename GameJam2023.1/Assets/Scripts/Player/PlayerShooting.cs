@@ -10,9 +10,12 @@ public class PlayerShooting : MonoBehaviour
 
     public float FRT = 5;
     private float fireTime;
+<<<<<<< Updated upstream
     public float ATK = 1;
     public float RNG = 5;
 
+=======
+>>>>>>> Stashed changes
     public Bullet pBullet;
     public GameObject bullet;
 
