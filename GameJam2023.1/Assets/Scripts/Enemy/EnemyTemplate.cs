@@ -11,7 +11,7 @@ public class EnemyTemplate : MonoBehaviour
     private IEnumerator coroutine;
 
     private Rigidbody2D rb;
-
+    public GameObject expObject;
     void Awake()
     {
 
@@ -58,6 +58,7 @@ public class EnemyTemplate : MonoBehaviour
         currHealth -= amount;
         if (currHealth <= 0)
         {
+            Instantiate(expObject,transform.position, Quaternion.identity);
             Destroy(gameObject);
         }//Things die when they are killed.
     }

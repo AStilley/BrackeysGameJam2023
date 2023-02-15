@@ -56,4 +56,9 @@ public class Bullet : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    public void setAtk(float atkVal)
+    {//Testing out SendMessage function in PlayerShooting.cs
+        atk = atkVal;
+    }
 }

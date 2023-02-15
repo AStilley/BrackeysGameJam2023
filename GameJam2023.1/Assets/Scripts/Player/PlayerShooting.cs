@@ -30,7 +30,7 @@ public class PlayerShooting : MonoBehaviour
             if (fireTime <= 0f)
             {
                 Bullet playerBullet = Instantiate(pBullet, transform.position, Quaternion.identity) as Bullet;
-                playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
+                //gameObject.SendMessage("setAtk", ATK);//playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
                 Destroy(playerBullet, RNG / 5f);
             }
         }
