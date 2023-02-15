@@ -918,6 +918,8 @@ MonoBehaviour:
   cScript: {fileID: 0}
   rScript: {fileID: 0}
   FRT: 5
+  ATK: 1
+  RNG: 5
   pBullet: {fileID: 5084863666784223831, guid: c179f0759f79dc94bb25c92b5d034e95, type: 3}
   bullet: {fileID: 2794278072308278390, guid: c179f0759f79dc94bb25c92b5d034e95, type: 3}
 --- !u!114 &1585402105
@@ -936,8 +938,6 @@ MonoBehaviour:
   cScript: {fileID: 0}
   rScript: {fileID: 0}
   SPD: 3
-  ATK: 1
-  RNG: 5
   rb: {fileID: 0}
 --- !u!212 &1585402106
 SpriteRenderer:
@@ -1045,8 +1045,6 @@ MonoBehaviour:
   bc: {fileID: 0}
   EXP: 0
   maxEXP: 5
-  lvl: 1
-  maxLvl: 20
 --- !u!95 &1585402112
 Animator:
   serializedVersion: 4
@@ -1112,6 +1110,9 @@ MonoBehaviour:
   mScript: {fileID: 0}
   sScript: {fileID: 0}
   cScript: {fileID: 0}
+  growth: 0
+  lvl: 1
+  maxLvl: 20
 --- !u!114 &1585402119
 MonoBehaviour:
   m_ObjectHideFlags: 0
