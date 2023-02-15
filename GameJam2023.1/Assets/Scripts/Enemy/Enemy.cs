@@ -14,4 +14,5 @@ public class Enemy : ScriptableObject
     public float enemyDirectionX;
     public float enemyDirectionY;
     public int expValue;
+    public int aiType;
 }

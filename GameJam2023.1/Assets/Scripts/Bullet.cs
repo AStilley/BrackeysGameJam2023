@@ -52,7 +52,10 @@ public class Bullet : MonoBehaviour
         {
             enemyCom.TakeDamage(atk);
         }//If the collider is an Enemy, then the enemy takes damage.
-
+        else if (col.gameObject.TryGetComponent<HealthSystem>(out HealthSystem player))
+        {
+            //enemyCom.TakeDamage(1);
+        }//If the collider is the player, then the player takes damage.
 
         Destroy(gameObject);
     }
