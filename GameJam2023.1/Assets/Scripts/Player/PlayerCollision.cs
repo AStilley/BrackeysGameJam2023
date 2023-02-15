@@ -21,32 +21,26 @@ public class PlayerCollision : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-<<<<<<< Updated upstream
-        if (EXP >= maxEXP)
-        {
-            float expGain = maxEXP * 1.25f;
-            EXP = 0;
-            maxEXP = (int)expGain;
-            if (rScript.lvl <= rScript.maxLvl)
-            {
-                rScript.lvl++;
-            }
-        }
-
-        rScript.growth = (rScript.lvl / 5) + 1f;
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Exp"))
         {
             EXP++;
             Destroy(collision.gameObject);
+            if (EXP >= maxEXP)
+            {
+                float expGain = maxEXP * 1.25f;
+                EXP = 0;
+                maxEXP = (int)expGain;
+                if (rScript.lvl <= rScript.maxLvl)
+                {
+                    rScript.lvl++;
+                }
+            }
+
+            rScript.growth = (rScript.lvl / 5) + 1f;
         }
-=======
-        Debug.Log(col.gameObject.name + "!");
->>>>>>> Stashed changes
+
+        Debug.Log(collision.gameObject.name + "!");
     }
 }
