@@ -9,6 +9,8 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - Century: Added player shooting
 - Century: Added game border
 - AStilley: Added enemy scriptable object
+- AStilley: Added enemy shooting
+- AStilley: Added enemy death
 ## Monday: (2/13/2023) 13/2/2023
 - Orion: Created player sprite
 - Orion: Created health feather sprite
