@@ -31,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
             {
                 Bullet playerBullet = Instantiate(pBullet, transform.position, Quaternion.identity) as Bullet;
                 //gameObject.SendMessage("setAtk", ATK);//playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
-                Destroy(playerBullet, RNG / 5f);
+                Destroy(playerBullet.gameObject, RNG / 5f);
             }
         }
     }
