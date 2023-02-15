@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 60bfadecded0dd94b806510ccdf5e7b1
+guid: 1d1a4f55bbc8be84785ff0ee8502a831
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -325,6 +325,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -346,6 +350,7 @@ TextureImporter:
       PegasusANIMSpriteSheet_7: -355993388
       PegasusANIMSpriteSheet_3: -1401294911
       PegasusANIMSpriteSheet_8: -1805458524
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

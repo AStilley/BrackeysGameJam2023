@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
+	public PlayerRebirth rScript;
+
+	public float h;
     [SerializeField]
     private static float health = 3f, totalHealth = 3f;
 
@@ -56,7 +59,13 @@ public class HealthSystem : MonoBehaviour
 			RectTransform g = Instantiate(HealthCorePrefab, Vector3.zero, Quaternion.identity, HealthCanvas) as RectTransform;
 			g.anchoredPosition = new Vector2(-500 + (50f * i), 245f);
 		}
-		Debug.Log(health + " Health!");
+		h = health;
+		Debug.Log("Player has " + health + " Health!");
+
+		if (health <= 0f)
+		{
+			rScript.Rebirth();
+		}
 	}
 
 }

@@ -9,7 +9,6 @@ public class EnemyTemplate : MonoBehaviour
 
     public Enemy enemy;
     private IEnumerator coroutine;
-
     private Rigidbody2D rb;
     public GameObject expObject;
 
@@ -19,7 +18,6 @@ public class EnemyTemplate : MonoBehaviour
 
     void Awake()
     {
-
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         currHealth = enemy.enemyHealth;
@@ -52,13 +50,12 @@ public class EnemyTemplate : MonoBehaviour
         while (true)
         {
             Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
+
             yield return new WaitForSeconds(waitTime);
         }
         //Shoots a bullet determined by the enemy type. Small, medium or large.
     }
-
-
-
+   
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")

@@ -10,16 +10,11 @@ public class Bullet : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    public float atk;
+    public float atk = 1f;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-
     }
 
     void FixedUpdate()
@@ -29,34 +24,19 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Bullet hit something");
-        //Debug.Log(atk + " Damage!");
+        Debug.Log("Bullet hit " + col.gameObject.name);
+        Debug.Log(atk + " Damage!");
+        Debug.Log(col.gameObject.tag);
 
-
+        if(col.gameObject.CompareTag("Player"))
+        {
+            HealthSystem.damage(atk);
+        }
         if (col.gameObject.TryGetComponent<EnemyTemplate>(out EnemyTemplate enemyCom))
         {
             enemyCom.TakeDamage(atk);
-        }//If the collider is an Enemy, then the enemy takes damage.
-
-
-        Destroy(gameObject);
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        Debug.Log("Bullet hit something");
-        //Debug.Log(atk + " Damage!");
-
-
-        if (col.gameObject.TryGetComponent<EnemyTemplate>(out EnemyTemplate enemyCom))
-        {
-            enemyCom.TakeDamage(atk);
-        }//If the collider is an Enemy, then the enemy takes damage.
-        else if (col.gameObject.TryGetComponent<HealthSystem>(out HealthSystem player))
-        {
-            //enemyCom.TakeDamage(1);
-        }//If the collider is the player, then the player takes damage.
-
+        }   
+        //If the collider is an Enemy, then the enemy takes damage.
         Destroy(gameObject);
     }
 

@@ -12,7 +12,6 @@ public class PlayerRebirth : MonoBehaviour
     public float lvl = 1;
     public float maxLvl = 20;
 
-    // Start is called before the first frame update
     void Awake()
     {
         mScript = GetComponent<PlayerMovement>();
@@ -20,16 +19,15 @@ public class PlayerRebirth : MonoBehaviour
         cScript = GetComponent<PlayerCollision>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void Rebirth()
+    public void Rebirth()
     {
-        sScript.ATK = sScript.ATK * growth;
-        mScript.SPD = mScript.SPD * growth;
-        sScript.RNG = sScript.RNG * growth;
+        sScript.ATK = sScript.ATK + (growth);
+        mScript.SPD = mScript.SPD + (growth / 5f);
+        sScript.RNG = sScript.RNG + (growth / 2f);
     }
 }

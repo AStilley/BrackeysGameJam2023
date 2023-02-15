@@ -23,26 +23,27 @@ public class PlayerCollision : MonoBehaviour
 
     void Update()
     {
-        if (EXP >= maxEXP)
-        {
-            float expGain = maxEXP * 1.25f;
-            EXP = 0;
-            maxEXP = (int)expGain;
-            if (rScript.lvl <= rScript.maxLvl)
-            {
-                rScript.lvl++;
-            }
-        }
-
-        rScript.growth = (rScript.lvl / 5) + 1f;
+        rScript.growth = (rScript.lvl / 5);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Exp"))
         {
             EXP++;
             Destroy(collision.gameObject);
+            if (EXP >= maxEXP)
+            {
+                float expGain = maxEXP * 1.25f;
+                EXP = 0;
+                maxEXP = (int)expGain;
+                if (rScript.lvl <= rScript.maxLvl)
+                {
+                    rScript.lvl++;
+                }
+            }
         }
+
+        Debug.Log(collision.gameObject.name + "!");
     }
 }

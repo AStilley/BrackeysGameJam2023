@@ -25,19 +25,20 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (fireTime <= 0f)
             {
                 Bullet playerBullet = Instantiate(pBullet, transform.position, Quaternion.identity) as Bullet;
                 //gameObject.SendMessage("setAtk", ATK);//playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
-                Destroy(playerBullet, RNG / 5f);
+                Destroy(playerBullet.gameObject, RNG / 5f);
+                fireTime = 2 / FRT;
             }
         }
     }
 
     void FixedUpdate()
     {
-        fireTime -= Time.deltaTime / FRT;
+        fireTime -= Time.deltaTime;
     }
 }
