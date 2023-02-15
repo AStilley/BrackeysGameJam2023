@@ -35,8 +35,7 @@ public class Bullet : MonoBehaviour
         if (col.gameObject.TryGetComponent<EnemyTemplate>(out EnemyTemplate enemyCom))
         {
             enemyCom.TakeDamage(atk);
-        }
-        
+        }   
         //If the collider is an Enemy, then the enemy takes damage.
         Destroy(gameObject);
     }

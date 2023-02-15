@@ -16,7 +16,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8288033783111592478, guid: c7f5123105625764c9dae806c3edb942, type: 3}
   enemyHealth: 3
   enemySpeed: 2
-  enemyFireRate: 1
+  enemyFireRate: 0
   enemyDirectionX: 1
   enemyDirectionY: 1
   expValue: 0
+  aiType: 1

@@ -11,6 +11,11 @@ public class EnemyTemplate : MonoBehaviour
     private IEnumerator coroutine;
     private Rigidbody2D rb;
     public GameObject expObject;
+
+    public float xSpeed;
+    public float ySpeed;
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,34 +28,53 @@ public class EnemyTemplate : MonoBehaviour
     void Start()
     {
         //Debug.Log("Test");
-        coroutine = Shoot(enemy.enemyFireRate);
-        StartCoroutine(coroutine);
+        if (enemy.enemyFireRate > 0)
+        {
+            coroutine = Shoot(enemy.enemyFireRate);
+            StartCoroutine(coroutine);
+        }
+
+
         //The enemy shoots constantly every x seconds, where x is a float value assigned in the enemy type.
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.position = transform.position + new Vector3(.05f * Mathf.Cos(5 * Time.time), -.0025f* enemy.enemySpeed, 0f);
+        movement(enemy.aiType);
     }
+
     IEnumerator Shoot(float waitTime)
     {
         Debug.Log("Test");
         while (true)
-        { 
-            GameObject bGameObject = Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
-            bGameObject.GetComponent<Bullet>().atk = 1f;
+        {
+            Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
+
             yield return new WaitForSeconds(waitTime);
         }
         //Shoots a bullet determined by the enemy type. Small, medium or large.
     }
+   
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            //DEAL DAMAGE TO PLAYER
+            die();
+        }
+    }
 
+
+    /*
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log("Player touched me");
         //This should cause a player to take damage
-    }
+        
 
+    }
+    */
 
     public void TakeDamage(float amount)
     {
@@ -58,8 +82,39 @@ public class EnemyTemplate : MonoBehaviour
         currHealth -= amount;
         if (currHealth <= 0)
         {
-            Instantiate(expObject,transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            die();
         }//Things die when they are killed.
     }
+
+    void die()
+    {
+        Instantiate(expObject, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
+    void movement(int ai)
+    {
+        switch (ai)
+        {
+            case 0://Enemy moves straight down
+                rb.velocity = new Vector2(0, -1 * ySpeed);
+                break;
+            case 1://Enemy moves left
+                rb.velocity = new Vector2(xSpeed, 0);
+                break;
+            case 2:
+                rb.velocity = new Vector2(-1* xSpeed, 0);
+                break;
+
+        }
+
+
+
+        //If the enemy moves down far enough, they are destroyed.
+        if (transform.position.y < -10 || transform.position.x > 20 || transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
