@@ -114,7 +114,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 236
+        width: 66
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cad99746605064c832cb0a2ef33f18
+      internalID: 1163029674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 238
+        width: 61
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d27d0d2bc95bd4fa1b3f0d3bda08e6
+      internalID: -617140653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 240
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc7e22d304d8114e9cf636a1d7a8b2e
+      internalID: 106453259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 240
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde892a543e1a840a0c371270dda9be
+      internalID: 39673735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 162
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 805537388edbfcb46853836008ff03ad
+      internalID: 39518158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 157
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e6a262f4d60dd4d8401cc81e40c3b8
+      internalID: 1142091553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_6
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 166
+        width: 22
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021e8b1db364c264c9c2826fcc55fb1b
+      internalID: 1688729515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_7
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 177
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a931628195565ad4cab59839de3ff280
+      internalID: 770351530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 111
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a189d02aee4e86449eae2c64eca1250
+      internalID: 1782224186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 112
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52808769ae42844fb5ab857e96f336c
+      internalID: -1501528941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 113
+        width: 46
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4961e49bb53c9e4bb03fdb4455b519f
+      internalID: -1833395959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 112
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a628a63b3f35746acef7cfe9fe11b0
+      internalID: 1061491409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PCPhoenixIdleSHEET_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc2cea044ab8b240a935fb710ffd739
+      internalID: -801638009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +398,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PCPhoenixIdleSHEET_6: 1688729515
+      PCPhoenixIdleSHEET_11: 1061491409
+      PCPhoenixIdleSHEET_3: 39673735
+      PCPhoenixIdleSHEET_0: 1163029674
+      PCPhoenixIdleSHEET_12: -801638009
+      PCPhoenixIdleSHEET_5: 1142091553
+      PCPhoenixIdleSHEET_10: -1833395959
+      PCPhoenixIdleSHEET_4: 39518158
+      PCPhoenixIdleSHEET_8: 1782224186
+      PCPhoenixIdleSHEET_2: 106453259
+      PCPhoenixIdleSHEET_1: -617140653
+      PCPhoenixIdleSHEET_9: -1501528941
+      PCPhoenixIdleSHEET_7: 770351530
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

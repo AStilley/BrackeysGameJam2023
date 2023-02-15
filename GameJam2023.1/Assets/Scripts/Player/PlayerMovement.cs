@@ -12,8 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerRebirth rScript;
 
     public float SPD = 3;
-    public float ATK = 1;
-    public float RNG = 5;
 
     private Vector2 movement;
 

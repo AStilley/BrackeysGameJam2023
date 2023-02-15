@@ -12,8 +12,6 @@ public class PlayerCollision : MonoBehaviour
 
     public float EXP = 0;
     public float maxEXP = 10;
-    public float lvl = 1;
-    public float maxLvl = 20;
 
     void Awake()
     {
@@ -30,11 +28,13 @@ public class PlayerCollision : MonoBehaviour
             float expGain = maxEXP * 1.25f;
             EXP = 0;
             maxEXP = (int)expGain;
-            if (lvl <= maxLvl)
+            if (rScript.lvl <= rScript.maxLvl)
             {
-                lvl++;
+                rScript.lvl++;
             }
         }
+
+        rScript.growth = (rScript.lvl / 5) + 1f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

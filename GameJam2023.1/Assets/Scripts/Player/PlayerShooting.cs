@@ -10,6 +10,8 @@ public class PlayerShooting : MonoBehaviour
 
     public float FRT = 5;
     private float fireTime;
+    public float ATK = 1;
+    public float RNG = 5;
 
     public Bullet pBullet;
     public GameObject bullet;
@@ -28,7 +30,8 @@ public class PlayerShooting : MonoBehaviour
             if (fireTime <= 0f)
             {
                 Bullet playerBullet = Instantiate(pBullet, transform.position, Quaternion.identity) as Bullet;
-                playerBullet.atk = mScript.ATK;//Creates bullets and then gives the bullets the ATK value 
+                playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
+                Destroy(playerBullet, RNG / 5f);
             }
         }
     }

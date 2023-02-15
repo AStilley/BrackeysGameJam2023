@@ -891,6 +891,7 @@ GameObject:
   - component: {fileID: 1585402104}
   - component: {fileID: 1585402110}
   - component: {fileID: 1585402118}
+  - component: {fileID: 1585402119}
   - component: {fileID: 1585402112}
   - component: {fileID: 1585402109}
   - component: {fileID: 1585402117}
@@ -1111,6 +1112,20 @@ MonoBehaviour:
   mScript: {fileID: 0}
   sScript: {fileID: 0}
   cScript: {fileID: 0}
+--- !u!114 &1585402119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585402103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae7d10f66ff17c459c097523a5f3710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthCanvas: {fileID: 1651482947}
+  HealthCorePrefab: {fileID: 0}
 --- !u!1 &1608765033
 GameObject:
   m_ObjectHideFlags: 0
