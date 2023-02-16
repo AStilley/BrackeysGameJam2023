@@ -33,7 +33,9 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - Orion: Created sound effects
 - Century: Added stat changes when leveling
 ## Thursday: 16/2/2023 (2/16/2023) 
-
+- Orion: Created phoenix left and right movement animations
+- AStilley: Added phoenix left and right movement animations
+- Kobracodee: Added pause menu
 ## Friday: 17/2/2023 (2/17/2023)
 
 ## Saturday: 18/2/2023 (2/18/2023) 
