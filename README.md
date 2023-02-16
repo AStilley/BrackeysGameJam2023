@@ -36,6 +36,7 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - Orion: Created phoenix left and right movement animations
 - AStilley: Added phoenix left and right movement animations
 - Kobracodee: Added pause menu
+- Brineexee: Added SoundManager, updated HealthScript and rebirth system
 ## Friday: 17/2/2023 (2/17/2023)
 
 ## Saturday: 18/2/2023 (2/18/2023) 
