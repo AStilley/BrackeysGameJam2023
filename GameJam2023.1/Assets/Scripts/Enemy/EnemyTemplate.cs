@@ -7,20 +7,26 @@ public class EnemyTemplate : MonoBehaviour
     //public GameObject enemyBullet;
     private float currHealth;
 
-    public Enemy enemy;
     private IEnumerator coroutine;
     private Rigidbody2D rb;
     public GameObject expObject;
 
     public float xSpeed;
     public float ySpeed;
+    public GameObject bulletPrefab;
+
+    public int enemyHealth;
+    public float enemyFireRate;
+    public int aiType;
+    public float enemySpeed;
+
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        currHealth = enemy.enemyHealth;
+        currHealth = enemyHealth;
         //Stores the current health of the enemy. The enemy type holds the maximum health.
     }
 
@@ -28,9 +34,9 @@ public class EnemyTemplate : MonoBehaviour
     void Start()
     {
         //Debug.Log("Test");
-        if (enemy.enemyFireRate > 0)
+        if (enemyFireRate > 0)
         {
-            coroutine = Shoot(enemy.enemyFireRate);
+            coroutine = Shoot(enemyFireRate);
             StartCoroutine(coroutine);
         }
 
@@ -41,7 +47,7 @@ public class EnemyTemplate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement(enemy.aiType);
+        movement(aiType);
     }
 
     IEnumerator Shoot(float waitTime)
@@ -49,7 +55,7 @@ public class EnemyTemplate : MonoBehaviour
         Debug.Log("Test");
         while (true)
         {
-            Instantiate(enemy.bulletPrefab, transform.position, Quaternion.identity);
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
 
             yield return new WaitForSeconds(waitTime);
         }
@@ -97,13 +103,13 @@ public class EnemyTemplate : MonoBehaviour
         switch (ai)
         {
             case 0://Enemy moves straight down
-                rb.velocity = new Vector2(0, -1 * ySpeed);
+                rb.velocity = new Vector2(0, -1 * ySpeed * (1f + 0.1f * enemySpeed));
                 break;
             case 1://Enemy moves left
-                rb.velocity = new Vector2(xSpeed, 0);
+                rb.velocity = new Vector2(xSpeed* (1f + 0.1f * enemySpeed), 0);
                 break;
             case 2:
-                rb.velocity = new Vector2(-1* xSpeed, 0);
+                rb.velocity = new Vector2(-1* xSpeed* (1f + 0.1f * enemySpeed), 0);
                 break;
 
         }

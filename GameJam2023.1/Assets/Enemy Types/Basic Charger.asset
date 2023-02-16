@@ -20,4 +20,4 @@ MonoBehaviour:
   enemyDirectionX: 1
   enemyDirectionY: 1
   expValue: 0
-  aiType: 1
+  aiType: 0
