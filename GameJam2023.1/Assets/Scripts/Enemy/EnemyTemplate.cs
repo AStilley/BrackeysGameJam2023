@@ -20,6 +20,8 @@ public class EnemyTemplate : MonoBehaviour
     public int aiType;
     public float enemySpeed;
 
+    public bool withMover;
+    public GameObject target;
 
 
     void Awake()
@@ -100,18 +102,26 @@ public class EnemyTemplate : MonoBehaviour
 
     void movement(int ai)
     {
-        switch (ai)
-        {
-            case 0://Enemy moves straight down
-                rb.velocity = new Vector2(0, -1 * ySpeed * (1f + 0.1f * enemySpeed));
-                break;
-            case 1://Enemy moves left
-                rb.velocity = new Vector2(xSpeed* (1f + 0.1f * enemySpeed), 0);
-                break;
-            case 2:
-                rb.velocity = new Vector2(-1* xSpeed* (1f + 0.1f * enemySpeed), 0);
-                break;
 
+
+        if (!withMover)
+        {
+            switch (ai)
+            {
+                case 0://Enemy moves straight down
+                    rb.velocity = new Vector2(0, -1 * ySpeed * (1f + 0.1f * enemySpeed));
+                    break;
+                case 1://Enemy moves left
+                    rb.velocity = new Vector2(xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    break;
+                case 2:
+                    rb.velocity = new Vector2(-1 * xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    break;
+            }
+        }
+        else
+        {
+            transform.RotateAround(target.transform.position, Vector3.forward, 30f *Time.deltaTime * enemySpeed);
         }
 
 

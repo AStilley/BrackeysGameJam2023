@@ -20,6 +20,12 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         rb.velocity = Vector2.up * speed;
+
+        //If the bullet moves down far enough, they are destroyed.
+        if (transform.position.y < -10 || transform.position.y > 5||  transform.position.x > 20 || transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -44,4 +50,6 @@ public class Bullet : MonoBehaviour
     {//Testing out SendMessage function in PlayerShooting.cs
         atk = atkVal;
     }
+
+
 }
