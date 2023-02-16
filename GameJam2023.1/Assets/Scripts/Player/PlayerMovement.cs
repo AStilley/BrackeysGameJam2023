@@ -4,7 +4,6 @@ using UnityEditor;
 using UnityEngine;
 
 
-
 [RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
 
 public class PlayerMovement : MonoBehaviour
@@ -14,11 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerRebirth rScript;
 
     public float SPD = 3;
-
     private Vector2 movement;
 
     [HideInInspector] public Rigidbody2D rb;
-
     private Animator animator;
 
     void Awake()
@@ -37,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Left", movement.x);
         animator.SetFloat("Right", movement.x);
-
     }
 
     void FixedUpdate()
