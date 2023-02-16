@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+
+
 [RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
 
 public class PlayerMovement : MonoBehaviour
@@ -17,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public Rigidbody2D rb;
 
-
+    private Animator animator;
 
     void Awake()
     {
@@ -25,12 +27,17 @@ public class PlayerMovement : MonoBehaviour
         sScript = GetComponent<PlayerShooting>();
         cScript = GetComponent<PlayerCollision>();
         rScript = GetComponent<PlayerRebirth>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Left", movement.x);
+        animator.SetFloat("Right", movement.x);
+
     }
 
     void FixedUpdate()
