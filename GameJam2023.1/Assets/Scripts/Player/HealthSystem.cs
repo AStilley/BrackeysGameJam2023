@@ -15,10 +15,14 @@ public class HealthSystem : MonoBehaviour
 	
     public static float Health { get { return health; } }
     public static float MaxHealth { get { return totalHealth; } }
-   
+
+	private Animator animator;
+
+
 	void Awake()
 	{
 		if (instance == null) {  instance = FindObjectOfType<HealthSystem>(); }
+		animator = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -64,6 +68,7 @@ public class HealthSystem : MonoBehaviour
 
 		if (health <= 0f)
 		{
+			animator.SetBool("dead", true);
 			rScript.Rebirth();
 		}
 	}
