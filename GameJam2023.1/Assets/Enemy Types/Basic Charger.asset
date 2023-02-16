@@ -10,8 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf49c2a933148a843a7948f20afa023b, type: 3}
-  m_Name: Basic Enemy Shooter
+  m_Name: Basic Charger
   m_EditorClassIdentifier: 
-  enemyName: Basic 1
-  bulletPrefab: {fileID: 0}
-  enemySpeed: 0
+  enemyName: Basic Shooter
+  bulletPrefab: {fileID: 8288033783111592478, guid: c7f5123105625764c9dae806c3edb942, type: 3}
+  enemyHealth: 3
+  enemySpeed: 2
+  enemyFireRate: 0
+  enemyDirectionX: 1
+  enemyDirectionY: 1
+  expValue: 0
+  aiType: 1
