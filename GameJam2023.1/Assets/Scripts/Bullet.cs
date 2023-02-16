@@ -30,9 +30,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("Bullet hit " + col.gameObject.name);
-        Debug.Log(atk + " Damage!");
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log("Bullet hit " + col.gameObject.name);
+       // Debug.Log(atk + " Damage!");
+        //Debug.Log(col.gameObject.tag);
 
         if(col.gameObject.CompareTag("Player"))
         {

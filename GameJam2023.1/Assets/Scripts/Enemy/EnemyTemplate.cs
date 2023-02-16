@@ -22,7 +22,7 @@ public class EnemyTemplate : MonoBehaviour
 
     public bool withMover;
     public GameObject target;
-
+    public bool isBoss;
 
     void Awake()
     {
@@ -54,7 +54,7 @@ public class EnemyTemplate : MonoBehaviour
 
     IEnumerator Shoot(float waitTime)
     {
-        Debug.Log("Test");
+        //Debug.Log("Test");
         while (true)
         {
             Instantiate(bulletPrefab, transform.position, Quaternion.identity);
@@ -64,29 +64,28 @@ public class EnemyTemplate : MonoBehaviour
         //Shoots a bullet determined by the enemy type. Small, medium or large.
     }
    
-    void OnCollisionEnter2D(Collision2D col)
+
+
+    void OnTriggerEnter2D(Collider2D col)
     {
+        //Debug.Log("Player touched me");
+        //This should cause a player to take damage
         if (col.gameObject.tag == "Player")
         {
             //DEAL DAMAGE TO PLAYER
-            die();
+            HealthSystem.damage(1);
+
+            if (!isBoss)
+            { die(); }//Enemies die on contact, but deal a damage to the player
+            else
+            { currHealth -= 5; }//Arbitrary number. Just don't want the bosses to die on contact
         }
-    }
-
-
-    /*
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("Player touched me");
-        //This should cause a player to take damage
-        
 
     }
-    */
 
     public void TakeDamage(float amount)
     {
-        Debug.Log("Enemy has taken Damage");
+        //Debug.Log("Enemy has taken Damage");
         currHealth -= amount;
         if (currHealth <= 0)
         {
