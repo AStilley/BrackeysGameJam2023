@@ -25,7 +25,13 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - AStilley: Added player animation
 - Century: Added EXP and leveling
 ## Wednesday: 15/2/2023 (2/15/2023) 
-
+- Brineexee: Connected life system
+- Orion: Created harpy sprite sheet
+- Orion: Created pegasus sprite sheet
+- Orion: Created Background
+- AStilley: Added enemy movement
+- Orion: Created sound effects
+- Century: Added stat changes when leveling
 ## Thursday: 16/2/2023 (2/16/2023) 
 
 ## Friday: 17/2/2023 (2/17/2023)
