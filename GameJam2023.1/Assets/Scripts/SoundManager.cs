@@ -30,7 +30,8 @@ public class SoundManager : MonoBehaviour
                 GameObject soundObject = new GameObject(soundName + "SoundInst");
                 AudioSource audioSource2 = soundObject.AddComponent<AudioSource>();
                 audioSource2.clip = instance.soundEffects[i];
-                audioSource2.PlayOneShot(instance.soundEffects[i], (randomVolume ? Random.Range(1, 6) : volume));
+                audioSource2.pitch = (randomVolume ? Random.Range(1f, 4f) : 1f);
+                audioSource2.PlayOneShot(instance.soundEffects[i], (randomVolume ? Random.Range(2, 4) : volume));
                 Destroy(soundObject, instance.soundEffects[i].length);
                 return;
             }
