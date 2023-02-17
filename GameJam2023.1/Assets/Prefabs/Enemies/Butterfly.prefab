@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8803021363002005751}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -3.95, y: 7.53, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expObject: {fileID: 6622834581396367641, guid: 597c53a54e4a73d45befa1ef8484a8a9, type: 3}
-  xSpeed: 0
+  xSpeed: 3
   ySpeed: 3
   bulletPrefab: {fileID: 8288033783111592478, guid: c7f5123105625764c9dae806c3edb942, type: 3}
   enemyHealth: 1
@@ -110,6 +110,7 @@ MonoBehaviour:
   enemySpeed: 1
   withMover: 0
   target: {fileID: 8803021363002005751}
+  isBoss: 0
 --- !u!50 &8803021363002005747
 Rigidbody2D:
   serializedVersion: 4

@@ -11,6 +11,9 @@ public class EnemyTemplate : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject expObject;
 
+
+
+
     public float xSpeed;
     public float ySpeed;
     public GameObject bulletPrefab;
@@ -57,8 +60,8 @@ public class EnemyTemplate : MonoBehaviour
         //Debug.Log("Test");
         while (true)
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
+            //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y -.3f, 0), Quaternion.identity);
             yield return new WaitForSeconds(waitTime);
         }
         //Shoots a bullet determined by the enemy type. Small, medium or large.
@@ -111,10 +114,14 @@ public class EnemyTemplate : MonoBehaviour
                     rb.velocity = new Vector2(0, -1 * ySpeed * (1f + 0.1f * enemySpeed));
                     break;
                 case 1://Enemy moves left
-                    rb.velocity = new Vector2(xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    rb.velocity = new Vector2(-1* xSpeed * (1f + 0.1f * enemySpeed), 0);
                     break;
                 case 2:
-                    rb.velocity = new Vector2(-1 * xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    rb.velocity = new Vector2(xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    break;
+                case 3:
+                    rb.velocity = new Vector2(xSpeed * (1f + 0.1f * enemySpeed), 0);
+                    transform.RotateAround(target.transform.position, Vector3.forward, -.5f);
                     break;
             }
         }
