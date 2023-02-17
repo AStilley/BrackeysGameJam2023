@@ -13,7 +13,6 @@ public class PlayerCollision : MonoBehaviour
     public float EXP = 0;
     public float maxEXP = 10;
 
-
     void Awake()
     {
         mScript = GetComponent<PlayerMovement>();
@@ -32,9 +31,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Exp"))
         {
             EXP++;
-            
             Destroy(collision.gameObject);
-            EXPManager.AddXP(1);
             if (EXP >= maxEXP)
             {
                 float expGain = maxEXP * 1.25f;
