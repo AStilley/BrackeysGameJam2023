@@ -104,10 +104,10 @@ MonoBehaviour:
   xSpeed: 3
   ySpeed: 3
   bulletPrefab: {fileID: 1449719470568328417, guid: 1466b2b7a93539c4f9a5eccaa0599300, type: 3}
-  enemyHealth: 3
-  enemyFireRate: 1
+  enemyHealth: 2
+  enemyFireRate: 1.5
   aiType: 0
-  enemySpeed: 2
+  enemySpeed: 5
   withMover: 0
   target: {fileID: 9223259093229640807}
   isBoss: 0
