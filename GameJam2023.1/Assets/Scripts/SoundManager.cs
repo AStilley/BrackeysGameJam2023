@@ -4,6 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioClip[] soundEffects;
     public AudioClip[] music;
+    [SerializeField] public string[] ClipsNotOnRandomPlay;
 
     private static SoundManager instance;
     private static AudioSource audioSource;
@@ -27,11 +28,25 @@ public class SoundManager : MonoBehaviour
             {
                 // Create a new game object with an AudioSource component
                 GameObject soundObject = new GameObject(soundName + "SoundInst");
-                AudioSource audioSource = soundObject.AddComponent<AudioSource>();
-                audioSource.clip = instance.soundEffects[i];
-
-                audioSource.PlayOneShot(instance.soundEffects[i], (randomVolume ? Random.Range(1, 6) : volume));
+                AudioSource audioSource2 = soundObject.AddComponent<AudioSource>();
+                audioSource2.clip = instance.soundEffects[i];
+                audioSource2.PlayOneShot(instance.soundEffects[i], (randomVolume ? Random.Range(1, 6) : volume));
                 Destroy(soundObject, instance.soundEffects[i].length);
+                return;
+            }
+        }
+        Debug.Log("Invalid sound name: " + soundName);
+    }
+
+    
+    public static void PlayMusic(string soundName)
+    {
+        for (int i = 0; i < instance.soundEffects.Length; i++)
+        {
+            if (instance.soundEffects[i].name == soundName)
+            {
+                audioSource.clip = instance.soundEffects[i];
+                audioSource.Play();
                 return;
             }
         }
@@ -41,7 +56,12 @@ public class SoundManager : MonoBehaviour
     public static void PlayRandomMusic()
     {
         int randomIndex = Random.Range(0, instance.music.Length);
-        audioSource.clip = instance.music[randomIndex];
-        audioSource.Play();
+        Debug.Log(instance.music[randomIndex].name);
+        Debug.Log(System.Array.IndexOf(instance.ClipsNotOnRandomPlay, instance.music[randomIndex].name));
+        if (System.Array.IndexOf(instance.ClipsNotOnRandomPlay, instance.music[randomIndex].name) >= 0) { PlayRandomMusic(); }
+        else {
+            audioSource.clip = instance.music[randomIndex];
+            audioSource.Play();
+        }
     }
 }

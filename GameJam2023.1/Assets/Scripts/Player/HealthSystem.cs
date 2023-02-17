@@ -32,6 +32,8 @@ public class HealthSystem : MonoBehaviour
 		if(health <= 0f && Input.GetKeyDown(KeyCode.U))
 		{
 			rScript.Rebirth();
+			SoundManager.PlaySound("Rebirth", 3f, false);
+			SoundManager.PlayMusic("BossBattle");
 		}
 		if(Input.GetKeyDown(KeyCode.F))
 		{
@@ -44,9 +46,13 @@ public class HealthSystem : MonoBehaviour
 	}
     public static void damage(float amount)
     {
-        if(health <= amount) { health = 0; }
-		else { health -= amount; }
-        instance.UpdateHealth();
+		// health == 0 => GameOver state, skipping
+		if(health != 0)
+		{
+			if(health <= amount) { health = 0; }
+			else { health -= amount; }
+			instance.UpdateHealth();
+		}
     }
 
     public static void heal(float amount)
@@ -65,22 +71,13 @@ public class HealthSystem : MonoBehaviour
 			Transform h = HealthCanvas.GetChild(i);
 			h.GetComponent<RawImage>().texture = (i+1 <= health ? HealthSprites[0] : HealthSprites[1]);
 		}
-		// foreach(Transform childHeart in HealthCanvas)
-		// {
-		// 	Destroy(childHeart.gameObject);
-		// }
-		// for(int i = 0; i < health; i++)
-		// {
-		// 	RectTransform g = Instantiate(HealthCorePrefab, Vector3.zero, Quaternion.identity, HealthCanvas) as RectTransform;
-		// 	g.anchoredPosition = new Vector3(18 + (50f * i), -24f, -4f);
-		// 	g.gameObject.GetComponent<RawImage>().enabled = true;
-		// }
 		Debug.Log("Player has " + health + " Health!");
 
 		if (health <= 0f)
 		{
 			animator.SetBool("dead", true);
 			SoundManager.PlaySound("Death", 3f, false);
+			PlayerMovement.CanMove = false;
 		}
 	}
 
