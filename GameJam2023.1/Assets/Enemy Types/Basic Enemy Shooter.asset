@@ -9,15 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf49c2a933148a843a7948f20afa023b, type: 3}
+  m_Script: {fileID: 11500000, guid: dcf6f77a72b02f24888d6ef0ab29e04c, type: 3}
   m_Name: Basic Enemy Shooter
   m_EditorClassIdentifier: 
-  enemyName: Basic 1
-  bulletPrefab: {fileID: 8288033783111592478, guid: c7f5123105625764c9dae806c3edb942, type: 3}
-  enemyHealth: 1
-  enemySpeed: 0
+  expObject: {fileID: 0}
+  xSpeed: 0
+  ySpeed: 0
+  bulletPrefab: {fileID: 0}
+  enemyHealth: 0
   enemyFireRate: 0
-  enemyDirectionX: 0
-  enemyDirectionY: 0
-  expValue: 0
   aiType: 0
+  enemySpeed: 0
+  withMover: 0
+  target: {fileID: 0}
+  isBoss: 0

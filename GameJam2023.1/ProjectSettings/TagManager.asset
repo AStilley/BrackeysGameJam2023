@@ -50,3 +50,6 @@ TagManager:
   - name: UI
     uniqueID: 2519659475
     locked: 0
+  - name: Entities
+    uniqueID: 1247545233
+    locked: 0

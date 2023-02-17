@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerCollision cScript;
     [HideInInspector] public PlayerRebirth rScript;
 
+    public static bool CanMove = true;
     public float SPD = 3;
     private Vector2 movement;
 
@@ -29,11 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if(CanMove)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Left", movement.x);
-        animator.SetFloat("Right", movement.x);
+            animator.SetFloat("Left", movement.x);
+            animator.SetFloat("Right", movement.x);
+        }
     }
 
     void FixedUpdate()
