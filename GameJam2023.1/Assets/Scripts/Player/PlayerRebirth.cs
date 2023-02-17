@@ -25,6 +25,7 @@ public class PlayerRebirth : MonoBehaviour
     {
 		animator.SetBool("dead", false);
         HealthSystem.heal(3f);
+		PlayerMovement.CanMove = true;
         sScript.ATK = sScript.ATK + (growth);
         mScript.SPD = mScript.SPD + (growth / 5f);
         sScript.RNG = sScript.RNG + (growth / 2f);
