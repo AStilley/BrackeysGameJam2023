@@ -38,5 +38,9 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - Kobracodee: Added pause menu
 - Brineexee: Added SoundManager, updated HealthScript and rebirth system
 ## Friday: 17/2/2023 (2/17/2023)
-
+- AStilley: Added en Enemy controller to control enemy spawning
+- Brineexee: Updated SoundManager
+- Kobracodee: Added xp system to show how much level and exp the player has
+- Orion: Created Boss music, level music, and death screen music
+- AStilley: Added a boss (Recolored the player sprite and made it face downward)
 ## Saturday: 18/2/2023 (2/18/2023) 
