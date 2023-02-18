@@ -6,7 +6,7 @@ using TMPro;
 
 public class GameOverScreen : MonoBehaviour
 {
-    private static GameOverScreen instance;
+    public static GameOverScreen instance;
     [SerializeField] private GameObject GameOverPanel;
     [SerializeField] private GameObject[] MiscOnRemove;
     [SerializeField] private GameObject[] GOMisc;
@@ -36,7 +36,7 @@ public class GameOverScreen : MonoBehaviour
     };
 
     public int requiredLVL = 1;
-    private static bool gameOver = false;
+    public static bool gameOver = false;
 
     private void Start()
     {
