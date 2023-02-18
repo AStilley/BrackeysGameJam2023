@@ -45,10 +45,6 @@ public class PlayerCollision : MonoBehaviour
             }
         }
 
-<<<<<<< Updated upstream
-        //Debug.Log(collision.gameObject.name + "!");
-=======
-<<<<<<< HEAD
         if (collision.gameObject.CompareTag("HP"))
         {
             HealthSystem.health++;
@@ -74,9 +70,5 @@ public class PlayerCollision : MonoBehaviour
         }
 
         Debug.Log(collision.gameObject.name + "!");
-=======
-        //Debug.Log(collision.gameObject.name + "!");
->>>>>>> a28c4066543fc7887b1f9fa117d485711b3dbca3
->>>>>>> Stashed changes
     }
 }
