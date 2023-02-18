@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6622834581396367844}
   - component: {fileID: 6622834581396367643}
   - component: {fileID: 6622834581396367642}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EXP
   m_TagString: Exp
   m_Icon: {fileID: 0}
