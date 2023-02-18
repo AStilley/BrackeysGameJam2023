@@ -36,7 +36,7 @@ public class SoundManager : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("Invalid sound name: " + soundName);
+        //Debug.Log("Invalid sound name: " + soundName);
     }
 
     
@@ -51,7 +51,7 @@ public class SoundManager : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("Invalid sound name: " + soundName);
+        //Debug.Log("Invalid sound name: " + soundName);
     }
 
     public static void PlayRandomMusic()

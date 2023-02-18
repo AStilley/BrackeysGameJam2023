@@ -111,7 +111,16 @@ public class EnemyTemplate : MonoBehaviour
             switch (ai)
             {
                 case 0://Enemy moves straight down
-                    rb.velocity = new Vector2(0, -1 * ySpeed * ((1f + 0.1f * enemySpeed)/2));
+                    if (isBoss && transform.position.y > 3.3 && transform.position.y < 4)
+                    {
+                        Debug.Log("Boop");
+                        rb.velocity = new Vector2(0, 0);
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(0, -1 * ySpeed * ((1f + 0.1f * enemySpeed) / 2));
+                    }
+                    
                     break;
                 case 1://Enemy moves left
                     rb.velocity = new Vector2(-1* xSpeed * (1f + 0.1f * enemySpeed), 0);
