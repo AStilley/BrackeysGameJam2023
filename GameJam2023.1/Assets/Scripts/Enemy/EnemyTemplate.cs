@@ -26,6 +26,8 @@ public class EnemyTemplate : MonoBehaviour
     public GameObject target;
     public bool isBoss;
 
+    private Animator animator;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +35,8 @@ public class EnemyTemplate : MonoBehaviour
         currHealth = enemyHealth;
         expParent = GameObject.Find("Spawns").transform;
         //Stores the current health of the enemy. The enemy type holds the maximum health.
+
+        animator = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -92,12 +96,16 @@ public class EnemyTemplate : MonoBehaviour
         currHealth -= amount;
         if (currHealth <= 0)
         {
-            die();
+            rb.velocity = new Vector2(0, 0);
+            animator.SetBool("dead", true);
+            //die();
         }//Things die when they are killed.
     }
 
-    void die()
+    public void die()
     {
+
+        Debug.Log("Dead");
         Instantiate(expObject, transform.position, Quaternion.identity, expParent);
         Destroy(gameObject);
     }

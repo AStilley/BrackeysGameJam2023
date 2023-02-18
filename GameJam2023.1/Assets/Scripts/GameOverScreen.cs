@@ -11,6 +11,8 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private GameObject[] MiscOnRemove;
     [SerializeField] private GameObject[] GOMisc;
 
+
+
     // Array of alternative titles
     string[] altTitles = new string[] {
         "You died!",
