@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+        PlayerMovement.CanMove = true;
+        GameOverScreen.gameOver = false;
     }
 
     public void QuitGame()

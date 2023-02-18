@@ -12,10 +12,13 @@ public class EXPManager : MonoBehaviour
 
     public int currentXP, targetEXP, lvl;
 
-    private static EXPManager instance;
+    public static EXPManager instance;
 
     private void Awake()
     {
+        currentXP = 0;
+        targetEXP = 10;
+        lvl = 1;
         if (instance == null) { instance = FindObjectOfType<EXPManager>(); }
     }
 

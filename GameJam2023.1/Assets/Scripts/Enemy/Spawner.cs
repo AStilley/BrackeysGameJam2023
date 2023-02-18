@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
     public float spawnRate;
     public GameObject enemy;
+    [SerializeField] private Transform parent;
     public bool isVertical;//Either spawns enemies that travel downward or move to the right.
 
     // Start is called before the first frame update
@@ -15,12 +16,6 @@ public class Spawner : MonoBehaviour
     {
         coroutine = Spawn(spawnRate);
         StartCoroutine(coroutine);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void spawnFaster(float decreaseRate)
@@ -36,11 +31,11 @@ public class Spawner : MonoBehaviour
         {//-5.5 -> 5.5
             if (isVertical)
             {
-                Instantiate(enemy, new Vector3(Random.Range(-5.5f, 5.5f), 7f, 0f), Quaternion.Euler(new Vector3(0, 0, 180)));
+                Instantiate(enemy, new Vector3(Random.Range(-5.5f, 5.5f), 7f, 0f), Quaternion.Euler(new Vector3(0, 0, 180)), parent);
             }
             else
             {
-                Instantiate(enemy, new Vector3(-16f, Random.Range(-4f, 4.3f), 0f), Quaternion.Euler(new Vector3(0, 0, 180)));
+                Instantiate(enemy, new Vector3(-16f, Random.Range(-4f, 4.3f), 0f), Quaternion.Euler(new Vector3(0, 0, 180)), parent);
             }
             yield return new WaitForSeconds(waitTime);
         }
