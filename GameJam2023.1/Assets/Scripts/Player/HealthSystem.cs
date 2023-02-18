@@ -8,7 +8,7 @@ public class HealthSystem : MonoBehaviour
 	public PlayerRebirth rScript;
 
 	[SerializeField]
-    private static float health = 3f, totalHealth = 3f;
+    public static float health = 3f, totalHealth = 3f;
 
 	[SerializeField] private Transform HealthCanvas, HealthCorePrefab;
 	[SerializeField] private Texture2D[] HealthSprites;

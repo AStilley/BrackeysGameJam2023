@@ -14,7 +14,7 @@ public class PlayerShooting : MonoBehaviour
     public float RNG = 5;
 
     public Bullet pBullet;
-    public GameObject bullet;
+    public GameObject bullet, bulletM, bulletL, bulletS;
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class PlayerShooting : MonoBehaviour
             {
                 Bullet playerBullet = Instantiate(pBullet, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity) as Bullet;
                 //gameObject.SendMessage("setAtk", ATK);//playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
-                Destroy(playerBullet.gameObject, RNG / 5f);
+                Destroy(playerBullet.gameObject, (RNG / 5f) * Time.deltaTime);
                 fireTime = 2 / FRT;
 			    SoundManager.PlaySound("PhoenixFire", 3f, true);
             }
