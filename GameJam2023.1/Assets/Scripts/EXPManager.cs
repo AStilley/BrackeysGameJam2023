@@ -17,7 +17,7 @@ public class EXPManager : MonoBehaviour
     private void Awake()
     {
         currentXP = 0;
-        targetEXP = 10;
+        targetEXP = 5;
         lvl = 1;
         if (instance == null) { instance = FindObjectOfType<EXPManager>(); }
     }
@@ -36,7 +36,7 @@ public class EXPManager : MonoBehaviour
         {
             instance.currentXP = instance.currentXP - instance.targetEXP;
             instance.lvl++;
-            instance.targetEXP +=  instance.targetEXP * 20/100;
+            instance.targetEXP +=  instance.targetEXP * 25/100;
 
             instance.lvlText.text = instance.lvl.ToString();
             instance.targetXPtext.text = "/" + instance.targetEXP.ToString();
