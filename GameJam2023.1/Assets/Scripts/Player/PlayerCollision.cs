@@ -45,6 +45,38 @@ public class PlayerCollision : MonoBehaviour
             }
         }
 
+<<<<<<< Updated upstream
         //Debug.Log(collision.gameObject.name + "!");
+=======
+<<<<<<< HEAD
+        if (collision.gameObject.CompareTag("HP"))
+        {
+            HealthSystem.health++;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("L"))
+        {
+            sScript.bullet = sScript.bulletL;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("M"))
+        {
+            sScript.bullet = sScript.bulletM;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("S"))
+        {
+            sScript.bullet = sScript.bulletS;
+            Destroy(collision.gameObject);
+        }
+
+        Debug.Log(collision.gameObject.name + "!");
+=======
+        //Debug.Log(collision.gameObject.name + "!");
+>>>>>>> a28c4066543fc7887b1f9fa117d485711b3dbca3
+>>>>>>> Stashed changes
     }
 }
