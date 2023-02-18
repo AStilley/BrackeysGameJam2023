@@ -79,6 +79,7 @@ public class GameOverScreen : MonoBehaviour
         PlayerMovement.CanMove = true;
         PlayerShooting.CanShoot = true;
         GameOverScreen.gameOver = false;
+        SoundManager.PlayMusic("E1M1");
         Debug.Log("Rebirth");
     }
 

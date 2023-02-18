@@ -26,6 +26,8 @@ public class EnemyTemplate : MonoBehaviour
     public GameObject target;
     public bool isBoss;
 
+    public int pointScore;
+
     private Animator animator;
 
     void Awake()
@@ -42,6 +44,10 @@ public class EnemyTemplate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (isBoss)
+        {
+            SoundManager.PlayMusic("BossBattle");
+        }
         //Debug.Log("Test");
         if (enemyFireRate > 0)
         {
@@ -107,6 +113,11 @@ public class EnemyTemplate : MonoBehaviour
 
         Debug.Log("Dead");
         Instantiate(expObject, transform.position, Quaternion.identity, expParent);
+        ScoreSystem.AddPoints(pointScore);
+        if (isBoss)
+        {
+            SoundManager.PlayMusic("E1M1");
+        }
         Destroy(gameObject);
     }
 

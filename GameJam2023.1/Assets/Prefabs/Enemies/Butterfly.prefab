@@ -111,6 +111,7 @@ MonoBehaviour:
   withMover: 0
   target: {fileID: 8803021363002005751}
   isBoss: 0
+  pointScore: 25
 --- !u!50 &8803021363002005747
 Rigidbody2D:
   serializedVersion: 4

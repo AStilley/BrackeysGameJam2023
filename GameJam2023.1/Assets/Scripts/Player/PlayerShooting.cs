@@ -39,7 +39,7 @@ public class PlayerShooting : MonoBehaviour
                     playerBullet.atk = ATK; //Creates bullets and then gives the bullets the ATK value
                     Destroy(playerBullet.gameObject, RNG / 5f);
                     fireTime = 2 / FRT;
-                    SoundManager.PlaySound("PhoenixFire", 3f, true);
+                    SoundManager.PlaySound("PhoenixFire", .5f, true);
                 }
             }
         }

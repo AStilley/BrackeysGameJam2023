@@ -59,8 +59,9 @@ public class EnemyController : MonoBehaviour
             hydraSpawn.spawnFaster(decreaseRate);
         }
 
-        if (spawnReference < (.8f - bossCount*0.1f) && spawnReference > (.7f - bossCount * 0.1f))
+        if (spawnReference < (.91f - bossCount*0.1f) && spawnReference > (.8f - bossCount * 0.1f))
         {
+            Debug.Log("BossBattle");
             Instantiate(phoenixBoss, new Vector3(0, 10, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
             bossCount++;
         }

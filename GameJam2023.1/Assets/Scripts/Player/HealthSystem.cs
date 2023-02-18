@@ -60,7 +60,7 @@ public class HealthSystem : MonoBehaviour
 		{
 			rScript.Rebirth();
 			animator.SetBool("dead", true);
-			SoundManager.PlaySound("Death", 3f, false);
+			SoundManager.PlaySound("Death", .5f, false);
 			PlayerMovement.CanMove = false;
 			GameOverScreen.GameOver();
 		}
