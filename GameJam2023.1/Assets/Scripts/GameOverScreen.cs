@@ -52,6 +52,7 @@ public class GameOverScreen : MonoBehaviour
         instance.GameOverPanel.GetComponent<Animator>().SetBool("GameOver", true);
         GameOverScreen.gameOver = true;
         PlayerMovement.CanMove = false;
+        PlayerShooting.CanShoot = false;
         if(instance.requiredLVL > EXPManager.instance.lvl)
         {
             //Final game over
@@ -75,12 +76,16 @@ public class GameOverScreen : MonoBehaviour
         foreach(GameObject g in instance.MiscOnRemove) { g.SetActive(true); }
         instance.GameOverPanel.SetActive(false);
         instance.GameOverPanel.GetComponent<Animator>().SetBool("GameOver", false);
+        PlayerMovement.CanMove = true;
+        PlayerShooting.CanShoot = true;
         GameOverScreen.gameOver = false;
+        Debug.Log("Rebirth");
     }
 
     public void Restart() {
         HealthSystem.heal(3f);
         PlayerMovement.CanMove = true;
+        PlayerShooting.CanShoot = true;
         GameOverScreen.gameOver = false;
         SceneManager.LoadScene("SampleScene");
     }
