@@ -9,8 +9,20 @@ public class EnemyController : MonoBehaviour
     public GameObject pegasusSpawner;
     public GameObject hydraSpawner;
 
+    public GameObject phoenixBoss;
+
+
     public float spawnReference = 1f;
     public float decreaseRate;
+
+    private int bossCount;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        bossCount = 0;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -19,13 +31,17 @@ public class EnemyController : MonoBehaviour
         {
             fasterSpawn();
         }
+
+
     }
 
 
     //When player dies and gain stats, the enemies spawn somewhat faster
     public void fasterSpawn()
     {
+        Debug.Log("Enemy controlled");
         spawnReference -= decreaseRate;
+        Debug.Log(spawnReference);
         if (butterflySpawner.gameObject.TryGetComponent<Spawner>(out Spawner butterflySpawn))
         {
             butterflySpawn.spawnFaster(decreaseRate);
@@ -42,6 +58,14 @@ public class EnemyController : MonoBehaviour
         {
             hydraSpawn.spawnFaster(decreaseRate);
         }
+
+        if (spawnReference < (.8f - bossCount*0.1f) && spawnReference > (.7f - bossCount * 0.1f))
+        {
+            Instantiate(phoenixBoss, new Vector3(0, 10, 0), Quaternion.Euler(new Vector3(0, 0, 180)));
+            bossCount++;
+        }
+
+
     }
 
 }

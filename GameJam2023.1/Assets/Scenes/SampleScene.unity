@@ -317,6 +317,7 @@ SortingGroup:
   m_SortingLayer: -1
   m_SortingOrder: -1
 --- !u!1 &154058044
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,23 +325,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 154058045}
   - component: {fileID: 154058048}
   - component: {fileID: 154058047}
   - component: {fileID: 154058046}
   m_Layer: 5
   m_Name: Button (1)
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!224 &154058045
 RectTransform:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 154058044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -450,6 +456,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154058044}
   m_CullTransparentMesh: 1
+
 --- !u!1 &329677473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2685,6 +2692,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070874270982442475, guid: a15ce45be6260a54581144e46d7f71b5, type: 3}
+      propertyPath: phoenixBoss
+      value: 
+      objectReference: {fileID: 4612623289142585768, guid: 8c6eaf49f0aa89e4ea25e807da03053b, type: 3}
+    - target: {fileID: 7070874270982442475, guid: a15ce45be6260a54581144e46d7f71b5, type: 3}
       propertyPath: decreaseRate
       value: 0.1
       objectReference: {fileID: 0}
@@ -2698,6 +2709,17 @@ PrefabInstance:
       objectReference: {fileID: 345425182}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a15ce45be6260a54581144e46d7f71b5, type: 3}
+--- !u!114 &1434648410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7070874270982442475, guid: a15ce45be6260a54581144e46d7f71b5, type: 3}
+  m_PrefabInstance: {fileID: 1434648409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a124f146e452d4c9e6f31f9e49b144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!210 &1496325467
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -3214,8 +3236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   growth: 0
-  lvl: 1
+  lvl: 10
   maxLvl: 20
+  enemyCon: {fileID: 1434648410}
 --- !u!114 &1585402119
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class PlayerRebirth : MonoBehaviour
     public float maxLvl = 20;
 	private Animator animator;
 
+    public EnemyController enemyCon;
+
     void Awake()
     {
         mScript = GetComponent<PlayerMovement>();
@@ -23,6 +25,7 @@ public class PlayerRebirth : MonoBehaviour
 
     public void Rebirth()
     {
+        enemyCon.fasterSpawn();
 		animator.SetBool("dead", false);
 		SoundManager.PlaySound("Rebirth", 3f, false);
         HealthSystem.heal(3f);

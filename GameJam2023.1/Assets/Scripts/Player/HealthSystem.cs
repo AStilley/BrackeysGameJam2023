@@ -58,6 +58,7 @@ public class HealthSystem : MonoBehaviour
 
 		if (health <= 0f)
 		{
+			rScript.Rebirth();
 			animator.SetBool("dead", true);
 			SoundManager.PlaySound("Death", 3f, false);
 			PlayerMovement.CanMove = false;
