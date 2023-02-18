@@ -32,6 +32,7 @@ public class PlayerCollision : MonoBehaviour
         {
             EXP++;
             Destroy(collision.gameObject);
+            EXPManager.AddXP(1);
             if (EXP >= maxEXP)
             {
                 float expGain = maxEXP * 1.25f;
