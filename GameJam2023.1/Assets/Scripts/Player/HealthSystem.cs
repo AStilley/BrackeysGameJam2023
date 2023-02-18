@@ -27,23 +27,6 @@ public class HealthSystem : MonoBehaviour
 		animator = GetComponent<Animator>();
 	}
 
-	void Update()
-	{
-		if(health <= 0f && Input.GetKeyDown(KeyCode.U))
-		{
-			rScript.Rebirth();
-			SoundManager.PlaySound("Rebirth", 3f, false);
-			SoundManager.PlayMusic("BossBattle");
-		}
-		if(Input.GetKeyDown(KeyCode.F))
-		{
-			heal(1f);
-		}
-		if(Input.GetKeyDown(KeyCode.G))
-		{
-			damage(1f);
-		}
-	}
     public static void damage(float amount)
     {
 		// health == 0 => GameOver state, skipping
@@ -79,6 +62,7 @@ public class HealthSystem : MonoBehaviour
 			animator.SetBool("dead", true);
 			SoundManager.PlaySound("Death", 3f, false);
 			PlayerMovement.CanMove = false;
+			GameOverScreen.GameOver();
 		}
 	}
 

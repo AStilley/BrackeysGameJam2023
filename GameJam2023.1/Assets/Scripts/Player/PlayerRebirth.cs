@@ -27,9 +27,10 @@ public class PlayerRebirth : MonoBehaviour
     {
         enemyCon.fasterSpawn();
 		animator.SetBool("dead", false);
+		SoundManager.PlaySound("Rebirth", 3f, false);
         HealthSystem.heal(3f);
 		PlayerMovement.CanMove = true;
-        sScript.ATK = sScript.ATK + (growth);
+        sScript.ATK = sScript.ATK + (growth / 2f);
         mScript.SPD = mScript.SPD + (growth / 5f);
         sScript.RNG = sScript.RNG + (growth / 2f);
     }

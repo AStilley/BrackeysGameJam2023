@@ -42,11 +42,12 @@ public class SoundManager : MonoBehaviour
     
     public static void PlayMusic(string soundName)
     {
-        for (int i = 0; i < instance.soundEffects.Length; i++)
+        if(soundName == "Clear") { audioSource.clip = null; audioSource.Stop(); return; }
+        for (int i = 0; i < instance.music.Length; i++)
         {
-            if (instance.soundEffects[i].name == soundName)
+            if (instance.music[i].name == soundName)
             {
-                audioSource.clip = instance.soundEffects[i];
+                audioSource.clip = instance.music[i];
                 audioSource.Play();
                 return;
             }

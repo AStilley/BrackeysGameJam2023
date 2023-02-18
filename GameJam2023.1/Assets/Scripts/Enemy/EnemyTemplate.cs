@@ -10,15 +10,14 @@ public class EnemyTemplate : MonoBehaviour
     private IEnumerator coroutine;
     private Rigidbody2D rb;
     public GameObject expObject;
-
-
+    private Transform expParent;
 
 
     public float xSpeed;
     public float ySpeed;
     public GameObject bulletPrefab;
 
-    public int enemyHealth;
+    public float enemyHealth;
     public float enemyFireRate;
     public int aiType;
     public float enemySpeed;
@@ -32,6 +31,7 @@ public class EnemyTemplate : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         currHealth = enemyHealth;
+        expParent = GameObject.Find("Spawns").transform;
         //Stores the current health of the enemy. The enemy type holds the maximum health.
     }
 
@@ -98,7 +98,7 @@ public class EnemyTemplate : MonoBehaviour
 
     void die()
     {
-        Instantiate(expObject, transform.position, Quaternion.identity);
+        Instantiate(expObject, transform.position, Quaternion.identity, expParent);
         Destroy(gameObject);
     }
 

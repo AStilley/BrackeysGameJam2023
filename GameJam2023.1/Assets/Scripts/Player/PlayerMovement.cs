@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetFloat("Left", movement.x);
             animator.SetFloat("Right", movement.x);
-        }
+        } else { movement = Vector2.zero; }
     }
 
     void FixedUpdate()

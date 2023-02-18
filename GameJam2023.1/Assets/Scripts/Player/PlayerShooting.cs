@@ -30,7 +30,8 @@ public class PlayerShooting : MonoBehaviour
             if (fireTime <= 0f)
             {
                 Bullet playerBullet = Instantiate(pBullet, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity) as Bullet;
-                //gameObject.SendMessage("setAtk", ATK);//playerBullet.atk = ATK;//Creates bullets and then gives the bullets the ATK value
+                //gameObject.SendMessage("setAtk", ATK);//
+                playerBullet.atk = ATK; //Creates bullets and then gives the bullets the ATK value
                 Destroy(playerBullet.gameObject, RNG / 5f);
                 fireTime = 2 / FRT;
 			    SoundManager.PlaySound("PhoenixFire", 3f, true);

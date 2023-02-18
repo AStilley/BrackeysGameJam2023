@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
 
     public float spawnReference = 1f;
     public float decreaseRate;
+
     private int bossCount;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         bossCount = 0;
     }
+
 
     // Update is called once per frame
     void Update()
