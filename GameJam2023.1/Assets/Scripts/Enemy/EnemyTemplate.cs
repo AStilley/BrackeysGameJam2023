@@ -148,7 +148,7 @@ public class EnemyTemplate : MonoBehaviour
                     break;
                 case 3:
                     rb.velocity = new Vector2(xSpeed * (1f + 0.1f * enemySpeed), 0);
-                    transform.RotateAround(target.transform.position, Vector3.forward, -.5f);
+                    transform.RotateAround(target.transform.position, Vector3.forward, -3f);
                     break;
             }
         }

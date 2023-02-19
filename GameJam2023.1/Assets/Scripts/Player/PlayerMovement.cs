@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerRebirth rScript;
 
     public static bool CanMove = true;
-    public float SPD = 3;
+    public float SPD = 5;
     private Vector2 movement;
 
     [HideInInspector] public Rigidbody2D rb;
