@@ -38,5 +38,21 @@ Basic Synopsis of our game: A vertical shoot'em up where the player is a phoenix
 - Kobracodee: Added pause menu
 - Brineexee: Added SoundManager, updated HealthScript and rebirth system
 ## Friday: 17/2/2023 (2/17/2023)
-
+- AStilely: Added an enemy controller to manage enemy spawnrate
+- Brineexee: Connected sounds
+- Kobracodee: Added an exp system to allow player to track their exp and levels
+- Orion: Created sound effects
+- Astilley: Added a boss
 ## Saturday: 18/2/2023 (2/18/2023) 
+- Brineexee: Added a death screen
+- Brineexee: Connected the rebirth system
+- Orion: Created proper boss sprite sheets
+- Astilley: Added enemy death animation
+- AStilley: Changed the background so that it scrolls 
+- AStilley: Added a score system to give players a sense of achievement
+- Astilley: Added a high score system
+- Century: Removed settings from main menu and pause menu as they went unused
+- Brineexee: Added the rest of the sound effects
+- Brineexee: Fixed borders and framerate
+- AStilley: Made a makeshift main menu thing to look kinda nice
+- Century: Updated exp objects to move downwards
