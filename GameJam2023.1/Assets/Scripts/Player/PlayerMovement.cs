@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         cScript = GetComponent<PlayerCollision>();
         rScript = GetComponent<PlayerRebirth>();
         animator = GetComponent<Animator>();
+        Application.targetFrameRate = 60;
     }
 
     void Update()

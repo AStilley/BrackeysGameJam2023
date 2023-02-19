@@ -50,6 +50,7 @@ public class GameOverScreen : MonoBehaviour
         foreach(GameObject g in instance.MiscOnRemove) { g.SetActive(false); }
         instance.GameOverPanel.SetActive(true);
         instance.GameOverPanel.GetComponent<Animator>().SetBool("GameOver", true);
+        ScoreSystem.setHighScore();
         GameOverScreen.gameOver = true;
         PlayerMovement.CanMove = false;
         PlayerShooting.CanShoot = false;

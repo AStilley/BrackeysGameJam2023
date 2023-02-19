@@ -32,12 +32,13 @@ public class EXPManager : MonoBehaviour
     public static void AddXP(int xp)
     {
         instance.currentXP += xp;
-        while (instance.currentXP >= instance.targetEXP)
+        if (instance.currentXP >= instance.targetEXP)
         {
             instance.currentXP = instance.currentXP - instance.targetEXP;
             instance.lvl++;
-            instance.targetEXP +=  instance.targetEXP * 25/100;
+            instance.targetEXP += instance.targetEXP * 25/100;
 
+            SoundManager.PlaySound("LVLup", 1f, false);
             instance.lvlText.text = instance.lvl.ToString();
             instance.targetXPtext.text = "/" + instance.targetEXP.ToString();
         }
