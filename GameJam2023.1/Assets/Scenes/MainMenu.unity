@@ -710,7 +710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009523553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -452.875, y: -237, z: 0}
+  m_LocalPosition: {x: -452.875, y: -230, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1244,8 +1244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Flaming Backfire: Rebirth: The Reckoning: Burning Revenge: Time to Kick
-    Some Ash 2023 \nMaster Deluxe Version "
+  m_text: 'Flaming Backfire: Rebirth From the Ashes'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60b05a867d9c6114d8bb740577d29fc3, type: 2}
   m_sharedMaterial: {fileID: 7835456251108911076, guid: 60b05a867d9c6114d8bb740577d29fc3, type: 2}
@@ -1272,12 +1271,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62.3
+  m_fontSize: 93.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 108
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
