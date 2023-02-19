@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         rb.velocity = Vector2.up * speed;
 
         //If the bullet moves down far enough, they are destroyed.
-        if (transform.position.y < -10 || transform.position.y > 5||  transform.position.x > 20 || transform.position.x < -20)
+        if (transform.position.y < -10 || transform.position.y > 5 ||  transform.position.x > 20 || transform.position.x < -20)
         {
             Destroy(gameObject);
         }
@@ -36,6 +36,7 @@ public class Bullet : MonoBehaviour
 
         if(col.gameObject.CompareTag("Player"))
         {
+            SoundManager.PlaySound("PhoenixGettingHit", 3f, false);
             HealthSystem.damage(atk);
         }
         if (col.gameObject.TryGetComponent<EnemyTemplate>(out EnemyTemplate enemyCom))

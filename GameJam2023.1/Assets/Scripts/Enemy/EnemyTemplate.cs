@@ -87,6 +87,7 @@ public class EnemyTemplate : MonoBehaviour
         {
             //DEAL DAMAGE TO PLAYER
             HealthSystem.damage(1);
+            SoundManager.PlaySound("PhoenixGettingHit", 3f, false);
 
             if (!isBoss)
             { die(); }//Enemies die on contact, but deal a damage to the player
@@ -110,7 +111,7 @@ public class EnemyTemplate : MonoBehaviour
 
     public void die()
     {
-
+        SoundManager.PlaySound("GenericEnemyDeath", 3f, true);
         Debug.Log("Dead");
         Instantiate(expObject, transform.position, Quaternion.identity, expParent);
         ScoreSystem.AddPoints(pointScore);
@@ -123,8 +124,6 @@ public class EnemyTemplate : MonoBehaviour
 
     void movement(int ai)
     {
-
-
         if (!withMover)
         {
             switch (ai)

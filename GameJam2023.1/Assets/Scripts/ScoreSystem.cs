@@ -5,8 +5,8 @@ using TMPro;
 
 public class ScoreSystem : MonoBehaviour
 {
-    public TextMeshProUGUI scoreNumber;
-    public TextMeshProUGUI highScoreNumber;
+    public TMP_Text scoreNumber;
+    public TMP_Text highScoreNumber;
     public int score;
 
     public static ScoreSystem instanceScore;
@@ -27,13 +27,6 @@ public class ScoreSystem : MonoBehaviour
         }
         
     }
-
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     private void Update()
     {
@@ -53,11 +46,12 @@ public class ScoreSystem : MonoBehaviour
     {
         instanceScore.scoreNumber.text = instanceScore.score.ToString();
     }
-    public void setHighScore()
+    public static void setHighScore()
     {
-        if (int.Parse(instanceScore.highScoreNumber.text) < score)
+        if (int.Parse(instanceScore.highScoreNumber.text) < instanceScore.score)
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            Debug.Log("New High Score! " + instanceScore.score);
+            PlayerPrefs.SetInt("HighScore", instanceScore.score);
         }
 
     }
